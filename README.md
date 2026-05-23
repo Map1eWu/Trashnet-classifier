@@ -15,7 +15,8 @@ Trashnet-classifier/
 │   ├── train.log          # 训练过程文本日志
 │   └── metrics.csv        # 逐步指标记录
 ├── test_img/              # 示例测试图片
-├── weights/               # 模型权重（不纳入版本控制）
+├── weights/               # 模型权重（体积过大，已加入 .gitignore，不纳入版本控制）
+├── tensorboard_logs/      # TensorBoard 日志（已加入 .gitignore，不纳入版本控制）
 └── .gitignore
 ```
 
@@ -95,32 +96,36 @@ python val_trashnet.py \
 
 ## 模型设计
 
-| 项目 | 配置 |
-|------|------|
-| 基础模型 | Swin Transformer (swin_t)，ImageNet1K 预训练 |
-| 微调策略 | 冻结前层，仅解冻 features[5~7]、norm 层及分类头 |
-| 分类数 | 6（cardboard / glass / metal / paper / plastic / trash） |
-| 输入尺寸 | 224 × 224 |
-| 优化器 | AdamW，lr = 1e-4 |
-| 损失函数 | CrossEntropyLoss |
-| 数据增强 | RandomHorizontalFlip、RandomRotation(15°) |
+
+| 项目     | 配置                                                     |
+| -------- | -------------------------------------------------------- |
+| 基础模型 | Swin Transformer (swin_t)，ImageNet1K 预训练             |
+| 微调策略 | 冻结前层，仅解冻 features[5~7]、norm 层及分类头          |
+| 分类数   | 6（cardboard / glass / metal / paper / plastic / trash） |
+| 输入尺寸 | 224 × 224                                               |
+| 优化器   | AdamW，lr = 1e-4                                         |
+| 损失函数 | CrossEntropyLoss                                         |
+| 数据增强 | RandomHorizontalFlip、RandomRotation(15°)               |
 
 ---
 
 ## 训练结果
 
-| Epoch | Train Loss | Val Loss | Train Acc | Val Acc |
-|-------|-----------|----------|-----------|---------|
-| 15    | 0.028     | 0.249    | 99.3%     | 94.0%   |
-| 16    | 0.057     | 0.210    | 98.1%     | 96.0%   |
-| 19    | 0.019     | 0.177    | 99.4%     | 96.4%   |
-| 20    | 0.009     | 0.165    | 99.7%     | 95.6%   |
 
-**最佳验证准确率：96.81%**（best_model.pth）
+| Epoch | Train Loss | Val Loss | Train Acc | Val Acc |
+| ----- | ---------- | -------- | --------- | ------- |
+| 15    | 0.028      | 0.249    | 99.3%     | 94.0%   |
+| 16    | 0.057      | 0.210    | 98.1%     | 96.0%   |
+| 19    | 0.019      | 0.177    | 99.4%     | 96.4%   |
+| 20    | 0.009      | 0.165    | 99.7%     | 95.6%   |
+
+**最佳验证准确率：96.81%**
 
 ---
 
 ## 查看 TensorBoard
+
+> **注意**：`tensorboard_logs/` 和 `weights/` 体积较大，已通过 `.gitignore` 排除，不包含在本仓库中。训练完成后会在 `--output_path` 指定的目录下自动生成。
 
 ```bash
 tensorboard --logdir ./run/tensorboard_logs/
