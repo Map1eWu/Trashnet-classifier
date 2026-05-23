@@ -1,0 +1,15 @@
+# 模型权重文件
+weights/
+*.pth
+
+#TensorBoard 日志
+tensorboard_logs/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统文件
+.DS_Store
+

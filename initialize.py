@@ -1,0 +1,21 @@
+from torchvision import datasets
+from   torch.utils.data import DataLoader
+
+def dataset_initialize(dataset_path, transform_op, bs):
+
+    name = None
+    if "train" in dataset_path:
+        names = "train"
+    elif "val" in dataset_path:
+        names = "val"
+    dataset = datasets.ImageFolder(
+        dataset_path,
+        transform=transform_op
+    )
+    class_names = dataset.classes
+
+    print(f"Number of {names} samples: {len(dataset)}")
+
+    loader = DataLoader(dataset, batch_size=bs, shuffle=True, num_workers=4, pin_memory=True, persistent_workers=True)
+
+    return loader, class_names
