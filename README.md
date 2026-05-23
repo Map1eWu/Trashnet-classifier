@@ -120,13 +120,3 @@ python val_trashnet.py \
 | 20    | 0.009      | 0.165    | 99.7%     | 95.6%   |
 
 **最佳验证准确率：96.81%**
-
----
-
-## 查看 TensorBoard
-
-> **注意**：`tensorboard_logs/` 和 `weights/` 体积较大，已通过 `.gitignore` 排除，不包含在本仓库中。训练完成后会在 `--output_path` 指定的目录下自动生成。
-
-```bash
-tensorboard --logdir ./run/tensorboard_logs/
-```
