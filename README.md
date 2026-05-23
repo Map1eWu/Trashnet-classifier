@@ -1,6 +1,15 @@
-# TrashNet 垃圾分类 —— 基于 Swin Transformer 的图像分类
+# 🗑️TrashNet 垃圾分类 —— 基于 Swin Transformer 的图像分类
 
-基于 Swin Transformer 对 [TrashNet](https://github.com/garythung/trashnet) 数据集进行微调，实现六类垃圾的自动分类，最佳验证准确率达 **96.81%**。
+![Model](https://img.shields.io/badge/Model-Swin_Transformer-pink)
+![Dataset](https://img.shields.io/badge/Dataset-TrashNet-orange)
+
+
+本仓库提供了基于 [Swin Transformer](https://github.com/microsoft/Swin-Transformer) 的**垃圾图像分类**模型的完整训练与推理代码。
+模型在 [TrashNet](https://github.com/garythung/trashnet) 数据集上进行微调，可识别六类常见垃圾——
+**纸板、玻璃、金属、纸张、塑料和其他垃圾**，支持整批验证集评估与单张图片 Top-3 推理。
+模型采用迁移学习策略，冻结主干网络前层权重，仅微调后三个 Block 及分类头，使用 NVIDIA RTX 4060GPU 训练 **20 个 epoch**，输入分辨率为 224×224，
+在验证集上最终达到最佳准确率 **96.81%**。
+本项目作为完整流程示例，涵盖数据加载、模型微调、训练监控与多场景推理的全过程。
 
 ---
 
@@ -114,9 +123,9 @@ python val_trashnet.py \
 
 | Epoch | Train Loss | Val Loss | Train Acc | Val Acc |
 | ----- | ---------- | -------- | --------- | ------- |
+| 5     | 0.056      | 0.173    | 98.2%     | 95.2%   |
+| 10    | 0.040      | 0.136    | 98.8%     | 96.8%   |
 | 15    | 0.028      | 0.249    | 99.3%     | 94.0%   |
-| 16    | 0.057      | 0.210    | 98.1%     | 96.0%   |
-| 19    | 0.019      | 0.177    | 99.4%     | 96.4%   |
 | 20    | 0.009      | 0.165    | 99.7%     | 95.6%   |
 
 **最佳验证准确率：96.81%**
