@@ -1,3 +1,5 @@
+# TrashNet 垃圾分类模型推理脚本 - 2026.05
+
 from torchvision import datasets
 from   torch.utils.data import DataLoader
 
