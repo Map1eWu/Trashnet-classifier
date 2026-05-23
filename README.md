@@ -7,6 +7,7 @@
 本仓库提供了基于 [Swin Transformer](https://github.com/microsoft/Swin-Transformer) 的**垃圾图像分类**模型的完整训练与推理代码。
 模型在 [TrashNet](https://github.com/garythung/trashnet) 数据集上进行微调，可识别六类常见垃圾——
 **纸板、玻璃、金属、纸张、塑料和其他垃圾**，支持整批验证集评估与单张图片 Top-3 推理。
+
 模型采用迁移学习策略，冻结主干网络前层权重，仅微调后三个 Block 及分类头，使用 NVIDIA RTX 4060GPU 训练 **20 个 epoch**，输入分辨率为 224×224，
 在验证集上最终达到最佳准确率 **96.81%**。
 本项目作为完整流程示例，涵盖数据加载、模型微调、训练监控与多场景推理的全过程。
