@@ -14,8 +14,8 @@ from   val_trashnet import val_test
 def parse_args():
     
     parser = argparse.ArgumentParser(description="Train a model on the TrashNet dataset.")
-    parser.add_argument("--dataset_train_path",         type=str,   default="F:/python_envs/datasets/TrashNet/dataset-split/train")
-    parser.add_argument("--dataset_val_path",           type=str,   default="F:/python_envs/datasets/TrashNet/dataset-split/val"  )
+    parser.add_argument("--dataset_train_path",         type=str,   default="./TrashNet/dataset-split/train")
+    parser.add_argument("--dataset_val_path",           type=str,   default="./TrashNet/dataset-split/val"  )
     
     parser.add_argument("--num_epochs",                 type=int,   default=20      )
     parser.add_argument("--batch_size",                 type=int,   default=32      )
