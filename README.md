@@ -3,25 +3,28 @@
 ![Model](https://img.shields.io/badge/Model-Swin_Transformer-pink)
 ![Dataset](https://img.shields.io/badge/Dataset-TrashNet-orange)
 
-
 本仓库提供了基于 [Swin Transformer](https://github.com/microsoft/Swin-Transformer) 的**垃圾图像分类**模型的完整训练与推理代码。
 模型在 [TrashNet](https://github.com/garythung/trashnet) 数据集上进行微调，可识别六类常见垃圾——
 **纸板、玻璃、金属、纸张、塑料和其他垃圾**，支持整批验证集评估与单张图片 Top-3 推理。
 
-模型采用迁移学习策略，冻结主干网络前层权重，仅微调后三个 Block 及分类头，使用 NVIDIA RTX 4060GPU 训练 **20 个 epoch**，输入分辨率为 224×224，
-在验证集上最终达到最佳准确率 **96.81%**。
+模型采用迁移学习策略，冻结浅层通用特征（Stage1-2），仅微调高层语义特征（Stage3-4）及分类头，使用 NVIDIA RTX 4060 GPU 训练 **50 个 epoch**，输入分辨率为 224×224，
+在验证集上最终达到最佳准确率 **98.01%**（Epoch 46）。
 本项目作为完整流程示例，涵盖数据加载、模型微调、训练监控与多场景推理的全过程。
 
 ---
 
 ## 项目结构
 
+
+
+* [ ]
+
 ```
 Trashnet-classifier/
 ├── initialize.py          # 数据集加载与 DataLoader 构建
 ├── train_trashnet.py      # 训练脚本（含日志、TensorBoard、断点续训）
 ├── val_trashnet.py        # 验证 & 单图推理脚本
-├── log/
+├── log/run20 or run21-50
 │   ├── train.log          # 训练过程文本日志
 │   └── metrics.csv        # 逐步指标记录
 ├── test_img/              # 示例测试图片
@@ -106,7 +109,6 @@ python val_trashnet.py \
 
 ## 模型设计
 
-
 | 项目     | 配置                                                     |
 | -------- | -------------------------------------------------------- |
 | 基础模型 | Swin Transformer (swin_t)，ImageNet1K 预训练             |
@@ -121,12 +123,17 @@ python val_trashnet.py \
 
 ## 训练结果
 
-
 | Epoch | Train Loss | Val Loss | Train Acc | Val Acc |
 | ----- | ---------- | -------- | --------- | ------- |
 | 5     | 0.056      | 0.173    | 98.2%     | 95.2%   |
 | 10    | 0.040      | 0.136    | 98.8%     | 96.8%   |
 | 15    | 0.028      | 0.249    | 99.3%     | 94.0%   |
 | 20    | 0.009      | 0.165    | 99.7%     | 95.6%   |
+| 31    | 0.040      | 0.140    | 98.8%     | 95.6%   |
+| 34    | 0.016      | 0.125    | 99.5%     | 97.2%   |
+| 40    | 0.009      | 0.128    | 99.7%     | 97.2%   |
+| 46    | 0.004      | 0.151    | 99.8%     | **98.0%** |
+| 50    | 0.006      | 0.165    | 99.9%     | 98.0%   |
 
-**最佳验证准确率：96.81%**
+**最佳验证准确率：98.01%**（Epoch 46，best_model.pth）
+
