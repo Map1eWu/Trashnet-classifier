@@ -15,10 +15,10 @@ def parse_args():
     parser.add_argument("--img_path",                   type=str,   default=None    )
 
     parser.add_argument("--output_path",                type=str,   default=None    )
-    parser.add_argument("--weights_path",               type=str,   default=r".\run\weights\best_model.pth")
+    parser.add_argument("--weights_path",               type=str,   default="./run/weights/best_model.pth")
 
     args = parser.parse_args()
-    args.img_path = r".\test_img\test_img4.jpg"
+    args.img_path = "./test_img/test_img4.jpg"
     return args
 
 def val_test(model, val_loader, device, loss_func=None):

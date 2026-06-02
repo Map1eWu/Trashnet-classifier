@@ -1,0 +1,119 @@
+2026-05-24 17:47:56,777 - INFO - Resuming training from weights: E:/1/My/study/2.b/rengongzhineng/2/run/weights/all/20_model.pth
+2026-05-24 17:47:57,270 - INFO - Resuming from epoch: 20
+2026-05-24 17:47:57,290 - INFO - Training started. Config: BS=32, LR=0.0001
+2026-05-24 17:47:57,290 - INFO - Total epochs: 50, Starting epoch: 21
+2026-05-24 17:48:45,511 - INFO - Epoch [21/50] Step [1300] Loss: 0.0020 Acc: 1.0000
+2026-05-24 17:48:53,361 - INFO - Epoch [21/50] Enter Val Test...
+2026-05-24 17:49:08,189 - INFO - Epoch [21/50]:
+2026-05-24 17:49:08,189 - INFO - Train_Loss : 0.023, Val_Loss : 0.277, Train Acc. : 0.993, Val Acc  : 0.948
+2026-05-24 17:49:08,284 - INFO - New best model saved with val acc: 0.9482
+2026-05-24 17:49:19,084 - INFO - Epoch [22/50] Step [1400] Loss: 0.0391 Acc: 1.0000
+2026-05-24 17:49:20,349 - INFO - Epoch [22/50] Enter Val Test...
+2026-05-24 17:49:21,338 - INFO - Epoch [22/50]:
+2026-05-24 17:49:21,338 - INFO - Train_Loss : 0.021, Val_Loss : 0.301, Train Acc. : 0.992, Val Acc  : 0.928
+2026-05-24 17:49:33,604 - INFO - Epoch [23/50] Enter Val Test...
+2026-05-24 17:49:34,619 - INFO - Epoch [23/50]:
+2026-05-24 17:49:34,619 - INFO - Train_Loss : 0.033, Val_Loss : 0.214, Train Acc. : 0.988, Val Acc  : 0.944
+2026-05-24 17:49:40,466 - INFO - Epoch [24/50] Step [1500] Loss: 0.0062 Acc: 1.0000
+2026-05-24 17:49:47,220 - INFO - Epoch [24/50] Enter Val Test...
+2026-05-24 17:49:48,261 - INFO - Epoch [24/50]:
+2026-05-24 17:49:48,261 - INFO - Train_Loss : 0.021, Val_Loss : 0.205, Train Acc. : 0.992, Val Acc  : 0.948
+2026-05-24 17:50:01,270 - INFO - Epoch [25/50] Step [1600] Loss: 0.0000 Acc: 1.0000
+2026-05-24 17:50:01,271 - INFO - Epoch [25/50] Enter Val Test...
+2026-05-24 17:50:02,317 - INFO - Epoch [25/50]:
+2026-05-24 17:50:02,318 - INFO - Train_Loss : 0.021, Val_Loss : 0.224, Train Acc. : 0.993, Val Acc  : 0.948
+2026-05-24 17:50:16,224 - INFO - Epoch [26/50] Enter Val Test...
+2026-05-24 17:50:17,308 - INFO - Epoch [26/50]:
+2026-05-24 17:50:17,308 - INFO - Train_Loss : 0.030, Val_Loss : 0.188, Train Acc. : 0.993, Val Acc  : 0.936
+2026-05-24 17:50:25,328 - INFO - Epoch [27/50] Step [1700] Loss: 0.0027 Acc: 1.0000
+2026-05-24 17:50:30,902 - INFO - Epoch [27/50] Enter Val Test...
+2026-05-24 17:50:32,015 - INFO - Epoch [27/50]:
+2026-05-24 17:50:32,016 - INFO - Train_Loss : 0.024, Val_Loss : 0.215, Train Acc. : 0.992, Val Acc  : 0.948
+2026-05-24 17:50:46,796 - INFO - Epoch [28/50] Enter Val Test...
+2026-05-24 17:50:47,911 - INFO - Epoch [28/50]:
+2026-05-24 17:50:47,912 - INFO - Train_Loss : 0.017, Val_Loss : 0.169, Train Acc. : 0.996, Val Acc  : 0.948
+2026-05-24 17:50:50,190 - INFO - Epoch [29/50] Step [1800] Loss: 0.0001 Acc: 1.0000
+2026-05-24 17:51:01,767 - INFO - Epoch [29/50] Enter Val Test...
+2026-05-24 17:51:02,878 - INFO - Epoch [29/50]:
+2026-05-24 17:51:02,879 - INFO - Train_Loss : 0.008, Val_Loss : 0.247, Train Acc. : 0.997, Val Acc  : 0.948
+2026-05-24 17:51:13,376 - INFO - Epoch [30/50] Step [1900] Loss: 0.0019 Acc: 1.0000
+2026-05-24 17:51:17,461 - INFO - Epoch [30/50] Enter Val Test...
+2026-05-24 17:51:18,634 - INFO - Epoch [30/50]:
+2026-05-24 17:51:18,634 - INFO - Train_Loss : 0.027, Val_Loss : 0.250, Train Acc. : 0.992, Val Acc  : 0.936
+2026-05-24 17:51:33,852 - INFO - Epoch [31/50] Enter Val Test...
+2026-05-24 17:51:35,209 - INFO - Epoch [31/50]:
+2026-05-24 17:51:35,209 - INFO - Train_Loss : 0.040, Val_Loss : 0.140, Train Acc. : 0.988, Val Acc  : 0.956
+2026-05-24 17:51:35,328 - INFO - New best model saved with val acc: 0.9562
+2026-05-24 17:51:39,976 - INFO - Epoch [32/50] Step [2000] Loss: 0.0105 Acc: 1.0000
+2026-05-24 17:51:50,289 - INFO - Epoch [32/50] Enter Val Test...
+2026-05-24 17:51:51,481 - INFO - Epoch [32/50]:
+2026-05-24 17:51:51,481 - INFO - Train_Loss : 0.018, Val_Loss : 0.215, Train Acc. : 0.993, Val Acc  : 0.952
+2026-05-24 17:52:03,642 - INFO - Epoch [33/50] Step [2100] Loss: 0.0018 Acc: 1.0000
+2026-05-24 17:52:06,071 - INFO - Epoch [33/50] Enter Val Test...
+2026-05-24 17:52:07,289 - INFO - Epoch [33/50]:
+2026-05-24 17:52:07,289 - INFO - Train_Loss : 0.010, Val_Loss : 0.178, Train Acc. : 0.996, Val Acc  : 0.956
+2026-05-24 17:52:21,902 - INFO - Epoch [34/50] Enter Val Test...
+2026-05-24 17:52:23,045 - INFO - Epoch [34/50]:
+2026-05-24 17:52:23,046 - INFO - Train_Loss : 0.016, Val_Loss : 0.125, Train Acc. : 0.995, Val Acc  : 0.972
+2026-05-24 17:52:23,160 - INFO - New best model saved with val acc: 0.9721
+2026-05-24 17:52:29,167 - INFO - Epoch [35/50] Step [2200] Loss: 0.0073 Acc: 1.0000
+2026-05-24 17:52:38,185 - INFO - Epoch [35/50] Enter Val Test...
+2026-05-24 17:52:39,409 - INFO - Epoch [35/50]:
+2026-05-24 17:52:39,409 - INFO - Train_Loss : 0.016, Val_Loss : 0.226, Train Acc. : 0.995, Val Acc  : 0.960
+2026-05-24 17:52:53,536 - INFO - Epoch [36/50] Step [2300] Loss: 0.0524 Acc: 0.9688
+2026-05-24 17:52:54,207 - INFO - Epoch [36/50] Enter Val Test...
+2026-05-24 17:52:55,405 - INFO - Epoch [36/50]:
+2026-05-24 17:52:55,405 - INFO - Train_Loss : 0.009, Val_Loss : 0.182, Train Acc. : 0.997, Val Acc  : 0.956
+2026-05-24 17:53:10,878 - INFO - Epoch [37/50] Enter Val Test...
+2026-05-24 17:53:12,125 - INFO - Epoch [37/50]:
+2026-05-24 17:53:12,125 - INFO - Train_Loss : 0.024, Val_Loss : 0.157, Train Acc. : 0.993, Val Acc  : 0.972
+2026-05-24 17:53:20,386 - INFO - Epoch [38/50] Step [2400] Loss: 0.0002 Acc: 1.0000
+2026-05-24 17:53:27,403 - INFO - Epoch [38/50] Enter Val Test...
+2026-05-24 17:53:28,590 - INFO - Epoch [38/50]:
+2026-05-24 17:53:28,590 - INFO - Train_Loss : 0.023, Val_Loss : 0.165, Train Acc. : 0.993, Val Acc  : 0.964
+2026-05-24 17:53:44,234 - INFO - Epoch [39/50] Enter Val Test...
+2026-05-24 17:53:45,437 - INFO - Epoch [39/50]:
+2026-05-24 17:53:45,437 - INFO - Train_Loss : 0.012, Val_Loss : 0.151, Train Acc. : 0.996, Val Acc  : 0.968
+2026-05-24 17:53:47,029 - INFO - Epoch [40/50] Step [2500] Loss: 0.0086 Acc: 1.0000
+2026-05-24 17:54:01,094 - INFO - Epoch [40/50] Enter Val Test...
+2026-05-24 17:54:02,286 - INFO - Epoch [40/50]:
+2026-05-24 17:54:02,286 - INFO - Train_Loss : 0.009, Val_Loss : 0.128, Train Acc. : 0.997, Val Acc  : 0.972
+2026-05-24 17:54:12,004 - INFO - Epoch [41/50] Step [2600] Loss: 0.0002 Acc: 1.0000
+2026-05-24 17:54:17,180 - INFO - Epoch [41/50] Enter Val Test...
+2026-05-24 17:54:18,371 - INFO - Epoch [41/50]:
+2026-05-24 17:54:18,371 - INFO - Train_Loss : 0.006, Val_Loss : 0.191, Train Acc. : 0.998, Val Acc  : 0.968
+2026-05-24 17:54:34,372 - INFO - Epoch [42/50] Enter Val Test...
+2026-05-24 17:54:35,550 - INFO - Epoch [42/50]:
+2026-05-24 17:54:35,551 - INFO - Train_Loss : 0.004, Val_Loss : 0.158, Train Acc. : 0.998, Val Acc  : 0.964
+2026-05-24 17:54:38,981 - INFO - Epoch [43/50] Step [2700] Loss: 0.0407 Acc: 0.9688
+2026-05-24 17:54:51,112 - INFO - Epoch [43/50] Enter Val Test...
+2026-05-24 17:54:52,338 - INFO - Epoch [43/50]:
+2026-05-24 17:54:52,338 - INFO - Train_Loss : 0.006, Val_Loss : 0.164, Train Acc. : 0.999, Val Acc  : 0.972
+2026-05-24 17:55:04,295 - INFO - Epoch [44/50] Step [2800] Loss: 0.0003 Acc: 1.0000
+2026-05-24 17:55:08,041 - INFO - Epoch [44/50] Enter Val Test...
+2026-05-24 17:55:09,271 - INFO - Epoch [44/50]:
+2026-05-24 17:55:09,271 - INFO - Train_Loss : 0.008, Val_Loss : 0.150, Train Acc. : 0.996, Val Acc  : 0.972
+2026-05-24 17:55:24,503 - INFO - Epoch [45/50] Enter Val Test...
+2026-05-24 17:55:25,750 - INFO - Epoch [45/50]:
+2026-05-24 17:55:25,750 - INFO - Train_Loss : 0.004, Val_Loss : 0.154, Train Acc. : 0.999, Val Acc  : 0.972
+2026-05-24 17:55:30,893 - INFO - Epoch [46/50] Step [2900] Loss: 0.0004 Acc: 1.0000
+2026-05-24 17:55:40,526 - INFO - Epoch [46/50] Enter Val Test...
+2026-05-24 17:55:41,732 - INFO - Epoch [46/50]:
+2026-05-24 17:55:41,733 - INFO - Train_Loss : 0.004, Val_Loss : 0.151, Train Acc. : 0.998, Val Acc  : 0.980
+2026-05-24 17:55:41,851 - INFO - New best model saved with val acc: 0.9801
+2026-05-24 17:55:55,237 - INFO - Epoch [47/50] Step [3000] Loss: 0.0004 Acc: 1.0000
+2026-05-24 17:55:56,785 - INFO - Epoch [47/50] Enter Val Test...
+2026-05-24 17:55:58,006 - INFO - Epoch [47/50]:
+2026-05-24 17:55:58,007 - INFO - Train_Loss : 0.003, Val_Loss : 0.156, Train Acc. : 0.999, Val Acc  : 0.980
+2026-05-24 17:56:14,526 - INFO - Epoch [48/50] Enter Val Test...
+2026-05-24 17:56:15,719 - INFO - Epoch [48/50]:
+2026-05-24 17:56:15,719 - INFO - Train_Loss : 0.003, Val_Loss : 0.158, Train Acc. : 0.999, Val Acc  : 0.980
+2026-05-24 17:56:22,820 - INFO - Epoch [49/50] Step [3100] Loss: 0.0008 Acc: 1.0000
+2026-05-24 17:56:31,284 - INFO - Epoch [49/50] Enter Val Test...
+2026-05-24 17:56:32,495 - INFO - Epoch [49/50]:
+2026-05-24 17:56:32,495 - INFO - Train_Loss : 0.003, Val_Loss : 0.156, Train Acc. : 0.998, Val Acc  : 0.980
+2026-05-24 17:56:48,215 - INFO - Epoch [50/50] Step [3200] Loss: 0.0003 Acc: 1.0000
+2026-05-24 17:56:48,216 - INFO - Epoch [50/50] Enter Val Test...
+2026-05-24 17:56:49,404 - INFO - Epoch [50/50]:
+2026-05-24 17:56:49,404 - INFO - Train_Loss : 0.006, Val_Loss : 0.165, Train Acc. : 0.999, Val Acc  : 0.980
+2026-05-24 17:56:49,633 - INFO - Best model saved as 'best_model.pth' with val acc: 0.9801
