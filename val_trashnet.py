@@ -8,17 +8,17 @@ from initialize import dataset_initialize
 def parse_args():
     
     parser = argparse.ArgumentParser(description="Train a model on the TrashNet dataset.")
-    parser.add_argument("--dataset_val_path",           type=str,   default="./TrashNet/dataset-split/val"  )
+    parser.add_argument("--dataset_val_path",           type=str,   default="/2/TrashNet/dataset-split/val"  )
     
     parser.add_argument("--num_classes",                type=int,   default=6       )
     parser.add_argument("--device",                     type=str,   default="cuda"  )
     parser.add_argument("--img_path",                   type=str,   default=None    )
 
     parser.add_argument("--output_path",                type=str,   default=None    )
-    parser.add_argument("--weights_path",               type=str,   default="./run/weights/best_model.pth")
+    parser.add_argument("--weights_path",               type=str,   default="2/run21-50/weights/best_model.pth")
 
     args = parser.parse_args()
-    args.img_path = "./test_img/test_img4.jpg"
+    args.img_path = "2/test_real_img/4.jpeg"
     return args
 
 def val_test(model, val_loader, device, loss_func=None):

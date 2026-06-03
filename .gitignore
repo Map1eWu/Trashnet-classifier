@@ -1,7 +1,7 @@
 # 模型权重文件
 weights/
 *.pth
-
+yolo/
 #TensorBoard 日志
 tensorboard_logs/
 
