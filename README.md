@@ -137,3 +137,21 @@ python val_trashnet.py \
 
 **最佳验证准确率：98.01%**（Epoch 46，best_model.pth）
 
+---
+
+## 测试集结果
+
+使用 `best_model.pth`（Epoch 46）在独立测试集上评估：
+
+| 项目       | 数值        |
+| ---------- | ----------- |
+| 测试样本数 | 257         |
+| 测试准确率 | **97.28%**  |
+
+```bash
+python val_trashnet.py \
+    --data_path /path/to/dataset-split/test \
+    --weights_path ./run21-50/weights/best_model.pth \
+    --device cuda
+```
+
