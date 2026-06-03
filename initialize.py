@@ -3,13 +3,15 @@
 from torchvision import datasets
 from   torch.utils.data import DataLoader
 
-def dataset_initialize(dataset_path, transform_op, bs):
+def dataset_initialize(dataset_path, transform_op=None, bs=32):
 
     name = None
     if "train" in dataset_path:
         names = "train"
     elif "val" in dataset_path:
         names = "val"
+    elif "test" in dataset_path:
+        names = "test"
     dataset = datasets.ImageFolder(
         dataset_path,
         transform=transform_op

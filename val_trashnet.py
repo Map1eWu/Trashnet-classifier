@@ -8,9 +8,10 @@ from initialize import dataset_initialize
 def parse_args():
     
     parser = argparse.ArgumentParser(description="Train a model on the TrashNet dataset.")
-    parser.add_argument("--dataset_val_path",           type=str,   default="/2/TrashNet/dataset-split/val"  )
+    parser.add_argument("--data_path",           type=str,   default=r"F:\python_envs\datasets\TrashNet\dataset-split\test"  )
     
     parser.add_argument("--num_classes",                type=int,   default=6       )
+    parser.add_argument("--batch_size",                 type=int,   default=32      )
     parser.add_argument("--device",                     type=str,   default="cuda"  )
     parser.add_argument("--img_path",                   type=str,   default=None    )
 
@@ -18,7 +19,7 @@ def parse_args():
     parser.add_argument("--weights_path",               type=str,   default="2/run21-50/weights/best_model.pth")
 
     args = parser.parse_args()
-    args.img_path = "2/test_real_img/4.jpeg"
+    # args.img_path = "2/test_real_img/4.jpeg"
     return args
 
 def val_test(model, val_loader, device, loss_func=None):
@@ -65,7 +66,13 @@ def main(args):
     model.to(device)
 
     if args.img_path is None:
-        val_loader, _ = dataset_initialize(args.data_path, args.batch_size, "val")
+        val_transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                 std=[0.229, 0.224, 0.225]),
+        ])
+        val_loader, _ = dataset_initialize(args.data_path, transform_op=val_transform, bs=args.batch_size)
         val_test(model, val_loader, device)
         return
     
